@@ -25,10 +25,9 @@ export const useStoreBase = create<StoreType>()(
       immer((...a) => ({
         ...createAuthSlice(...a),
       })),
-
       {
-        name: "session-storage", // Name of the item in localStorage (or sessionStorage)
-        getStorage: () => sessionStorage, // (optional) by default it's localStorage
+        name: "session-storage",
+        getStorage: () => sessionStorage,
       }
     )
   )
